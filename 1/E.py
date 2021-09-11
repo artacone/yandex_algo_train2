@@ -3,7 +3,7 @@ def find_distance(p1, p2):
 
 
 def get_position(d, x, y):
-    if (0 <= x <= d) and (0 <= y <= d) and (y <= -x + d):
+    if (x >= 0) and (y >= 0) and (x + y <= d):
         return 0
     distances = [
         (find_distance((x, y), (0, 0)), 1),
