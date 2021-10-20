@@ -1,7 +1,7 @@
 def find_max_sub_array(nums, nums_size):
     sums = [0] * nums_size
     max_sum = sums[0] = nums[0]
-    for i in range(nums_size):
+    for i in range(1, nums_size):
         sums[i] = max(nums[i], sums[i-1] + nums[i])
         max_sum = max(max_sum, sums[i])
     return max_sum
