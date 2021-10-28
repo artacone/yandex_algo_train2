@@ -17,6 +17,6 @@
 - Контест #6 "Бинарный поиск" [контест](https://contest.yandex.ru/contest/29188/problems/), [решения](6/)
 5/5
 - Контест #7 "Сортировка событий" [контест](https://contest.yandex.ru/contest/29396/problems/), [решения](7/)
-0/5
+5/5
 - Контест #8 "Деревья" [контест](https://contest.yandex.ru/contest/29403/problems/), [решения](8/)
 0/5
