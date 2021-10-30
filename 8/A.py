@@ -15,46 +15,46 @@ class BST:
             self.root = node
             return node
         else:
-            return self.insert_node(self.root, node)
+            return self.__insert_subtree(self.root, node)
 
-    def insert_node(self, root, node):
+    def find(self, n):
+        return self.__find_subtree(self.root, n)
+
+    def print(self):
+        if self.root is not None:
+            self.__print_subtree(self.root, 0)
+
+    def __insert_subtree(self, root, node):
         if node.value < root.value:
             if root.left is None:
                 root.left = node
                 return node
             else:
-                return self.insert_node(root.left, node)
+                return self.__insert_subtree(root.left, node)
         elif node.value > root.value:
             if root.right is None:
                 root.right = node
                 return node
             else:
-                return self.insert_node(root.right, node)
+                return self.__insert_subtree(root.right, node)
         else:
             return None
 
-    def find(self, n):
-        return self.find_node(self.root, n)
-
-    def find_node(self, root, n):
+    def __find_subtree(self, root, n):
         if root is None:
             return None
         if n == root.value:
             return root
         elif n < root.value:
-            return self.find_node(root.left, n)
+            return self.__find_subtree(root.left, n)
         else:
-            return self.find_node(root.right, n)
+            return self.__find_subtree(root.right, n)
 
-    def print(self):
-        if self.root is not None:
-            self.print_subtree(self.root, 0)
-
-    def print_subtree(self, root, height):
+    def __print_subtree(self, root, height):
         if root is not None:
-            self.print_subtree(root.left, height + 1)
+            self.__print_subtree(root.left, height + 1)
             print("." * height, root.value, sep='')
-            self.print_subtree(root.right, height + 1)
+            self.__print_subtree(root.right, height + 1)
 
 
 if __name__ == '__main__':
