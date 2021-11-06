@@ -48,10 +48,11 @@ class Pedigree:
             ancestor, descendant = descendant, ancestor
         current = descendant
 
-        while current.parent is not None:
-            if current.parent == ancestor:
-                return relation
+        while current.height != ancestor.height:
             current = current.parent
+
+        if current == ancestor:
+            return relation
         return 0
 
 
