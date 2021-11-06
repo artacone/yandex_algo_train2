@@ -19,4 +19,4 @@
 - Контест #7 "Сортировка событий" [контест](https://contest.yandex.ru/contest/29396/problems/), [решения](7/)
 5/5
 - Контест #8 "Деревья" [контест](https://contest.yandex.ru/contest/29403/problems/), [решения](8/)
-2/5
+3/5
